@@ -3,12 +3,14 @@ import numpy as np
 from pathlib import Path
 
 gbff_file = Path.cwd() / "data/GCF_020647795.1_ASM2064779v1_genomic.gbff"
+num = 0
 
 records = SeqIO.parse(gbff_file, "genbank")
 
 for record in SeqIO.parse(gbff_file, "genbank"):
 
     for feature in record.features:
+        num +=1
 
         if feature.type == "CDS":
 
@@ -22,3 +24,4 @@ for record in SeqIO.parse(gbff_file, "genbank"):
                 protein_id,
                 feature.location
             )
+print(num)
