@@ -1,7 +1,4 @@
-import pandas as pd
-from pandas import DataFrame
-from pathlib import Path
-
+from .utils.sequence_checker import SequenceChecker
 
 def main():
     pass
