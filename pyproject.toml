@@ -11,7 +11,11 @@ dependencies = [
     "matplotlib",
     "fastapi[standard]>=0.141.1",
     "dotenv>=0.9.9",
+    "jupyter",
 ]
+
+[dependency-groups]
+dev = ["pytest>=8"]
 
 [build-system]
 requires = ["hatchling"]
@@ -19,3 +23,10 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/promoter_seeker"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "live: hits the hyppe API (needs .env keys and network)",
+    "upload: calls POST /wgraj (burns a 5-minute cooldown slot)",
+]
