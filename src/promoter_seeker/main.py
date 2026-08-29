@@ -1,12 +1,10 @@
 import pandas as pd
+from pandas import DataFrame
 from pathlib import Path
 
 
 def main():
-    path = Path.cwd() / "promotory.csv"
-    df = pd.read_csv(path,sep=";")
-    print(df)
-
+    pass
 
 if __name__ == "__main__":
     main()
