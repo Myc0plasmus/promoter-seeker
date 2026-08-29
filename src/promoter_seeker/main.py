@@ -1,3 +1,5 @@
+from .utils.sequence_checker import SequenceChecker
+
 def main():
     print("Hello world!")
 
