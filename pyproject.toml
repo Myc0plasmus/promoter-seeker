@@ -9,6 +9,8 @@ dependencies = [
     "numpy",
     "scikit-learn",
     "matplotlib",
+    "fastapi[standard]>=0.141.1",
+    "dotenv>=0.9.9",
 ]
 
 [build-system]
